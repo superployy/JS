@@ -194,7 +194,7 @@ function formatDuration(seconds) {
     return `${minutes}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Fixed: use 'clientReady' instead of 'ready' (v15+)
+// Fixed: use 'clientReady' to avoid deprecation warning
 client.once('clientReady', () => {
     console.log(`✅ Logged in as ${client.user.tag}`);
     client.user.setActivity('R!p <song>', { type: 'LISTENING' });
